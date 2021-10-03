@@ -1,0 +1,56 @@
+.header {
+  background-color: $blue;
+  padding-top: toRem(30);
+  padding-bottom: toRem(50.7);
+  margin-bottom: toRem(-1);
+  @include media-breakpoint-up(lg) {
+    padding-top: toRem(47);
+    padding-bottom: toRem(69);
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    width: toRem(138);
+    height: toRem(22);
+    @include media-breakpoint-up(lg) {
+      width: toRem(166);
+      height: toRem(26);
+    }
+  }
+
+  &__nav-list {
+    display: none;
+    @include media-breakpoint-up(lg) {
+      margin-top: toRem(11);
+      display: block;
+    }
+    ul {
+      display: flex;
+      li {
+        margin-right: toRem(53);
+        &:last-of-type {
+          margin-right: toRem(0);
+        }
+        a {
+          min-width: toRem(129);
+          height: toRem(21);
+          display: block;
+          padding: 0 toRem(6) toRem(2);
+          text-transform: uppercase;
+          @include fontBeta(12, 16, 400);
+          color: $white;
+          transition: font-weight 0.3s ease, border-bottom 0.1s linear;
+          &:hover {
+            font-weight: bold;
+            border-bottom: toRem(3) solid $pink;
+          }
+        }
+      }
+    }
+  }
+}

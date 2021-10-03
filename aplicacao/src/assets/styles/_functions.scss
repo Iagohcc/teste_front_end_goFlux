@@ -1,0 +1,7 @@
+@import '../../../node_modules/bootstrap/scss/functions';
+
+// Convert px to rem
+@function toRem($value) {
+  $remValue: ($value / 16) + rem;
+  @return $remValue;
+}

@@ -1,0 +1,12 @@
+.container {
+  max-width: toRem(1088);
+  padding-left: toRem(16);
+  padding-right: toRem(16);
+  overflow: hidden;
+
+  @include media-breakpoint-up(lg) {
+    overflow: initial;
+    padding-left: toRem(0);
+    padding-right: toRem(0);
+  }
+}

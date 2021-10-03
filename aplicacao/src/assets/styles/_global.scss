@@ -1,0 +1,22 @@
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
