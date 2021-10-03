@@ -4,7 +4,7 @@
   left: 0;
   height: 100%;
   width: 240px;
-  background-color: #11101d;
+  background-color: #161633;
   padding: 6px 14px;
 }
 
@@ -61,13 +61,22 @@
   border-radius: 12px;
   outline: none;
   border: none;
-  background:#1d1b31;
+  background:#ea3029;
   padding-left: 50px;
   font-size: 18px;
   color: #fff;
 }
 
-.sidebar ul li .bx-search {
+.sidebar ul li input::placeholder {
+  color: #fff;
+}
+
+.sidebar .yourMusic {
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.sidebar ul li .bx-search-alt-2 {
  position: absolute;
  z-index: 99;
  color: #fff;
@@ -106,7 +115,7 @@
   position: relative;
   padding: 10px 6px;
   height: 60px;
-  background: #1d1b31;
+  background: #ea3029;
 }
 
 .profile_content .profile .profile_details {
@@ -119,6 +128,7 @@
   width: 45px;
   object-fit: cover;
   border-radius: 12px;
+  border: 1px solid #11101d;
 }
 
 .profile .profile_details .name_people {
@@ -139,4 +149,18 @@
   line-height: 50px;
   font-size: 20px;
   border-radius: 12px;
+}
+
+.home_content {
+  position: absolute;
+  height: 100%;
+  width: calc(100% - 240px);
+  left: 240px;
+}
+
+.home_content .text {
+  font-size: 25px;
+  font-weight: 500;
+  color: #1d1b31;
+  margin: 12px;
 }
