@@ -1,0 +1,28 @@
+.header-painel {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.header-painel .Logo-header {
+  padding: 5px 5px 5px 50px;
+  color: #fff;
+  font-size: 25px;
+}
+
+.header-painel .search-header {
+  color: #fff;
+  font-size: 22px;
+  padding: 5px 80px 5px 5px;
+}
+
+.header-painel input {
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  background: #fff;
+  padding-left: 10px;
+  font-size: 20px;
+}

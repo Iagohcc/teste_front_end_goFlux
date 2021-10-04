@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import 'boxicons';
 import photoProfile from "../../assets/img/Iago.PNG";
-import logo from "../../assets/img/favicon-32x32.png"
+import SideLogo from "../../assets/img/favicon-32x32.png"
 
 class Layout extends React.Component {
   //função
@@ -22,7 +22,7 @@ class Layout extends React.Component {
         <div className="sidebar">
           <div className="logo_content">
             <div className="logo">
-              <img src={logo} alt="" />
+              <img src={SideLogo} alt="" />
               <div className="logo_name">fluxMusic</div>
             </div>
             <i class='bx bx-menu' id="btn" onClick={this.abreSide}></i>
@@ -88,6 +88,15 @@ class Layout extends React.Component {
         </div>
         <div className="main-painel">
           <div className="header-content">
+            <div className="header-painel">
+              <div className="Logo-header">
+                <h1 className="logo_name">FluxMusic</h1>   
+              </div>         
+              <div className="search-header">
+                <i class='bx bx-search-alt-2'></i>
+                <input type="text" placeholder="Search..."></input>
+              </div>
+            </div>
           </div>
           <div className="main-content">
             {this.props.children}
