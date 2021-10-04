@@ -1,15 +1,9 @@
 // import CardAlbum from "../../components/CardAlbum";
-import React, { useEffect, useState } from "react";
+import React from "react";
+import Layout from "../../components/Layout";
 
-export default function Albums(){
+export default function Albums() {
   return (
-    <div>
-      <div className="home_content">
-          <div className="text">Albums</div> 
-          {/* <CardAlbum /> */}
-          {/* <p>Music: {albums?.}</p>
-          <p>Artist: {albums?.}</p> */}
-      </div>  
-    </div>
+    <h1>Albums</h1>
   );
 }

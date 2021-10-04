@@ -10,7 +10,7 @@
 }
 
 .sidebar.active {
-  width: 240px ;
+  width: 240px;
 }
 
 .sidebar .logo_content .logo {
@@ -34,6 +34,7 @@
 }
 
 .logo_content .logo .logo_name {
+  margin-left: 8px;
   font-size: 20px;
   font-weight: 400;
 }
@@ -77,7 +78,7 @@
   border-radius: 12px;
   outline: none;
   border: none;
-  background:#ea3029;
+  background: #ea3029;
   padding-left: 50px;
   font-size: 18px;
   color: #fff;
@@ -87,22 +88,32 @@
   color: #fff;
 }
 
-.sidebar .yourMusic {
-  margin-bottom: 5px;
+.sidebar .myMusic {
+  margin-left: 8px;
+}
+
+.sidebar .bx-headphone {
   color: #fff;
 }
 
-.sidebar ul li .bx-search-alt-2 {
- position: absolute;
- z-index: 99;
- color: #fff;
- font-size: 22px;
- transition: all 0.5 ease;
+.sidebar .yourMusic {
+  margin-left: 4px;
+  margin-bottom: 5px;
+  color: #fff;
+  text-align: center;
 }
 
-.sidebar ul li .bx-search-alt-2:hover  {
-    background: #fff;
-    color: #1d1b31;
+.sidebar ul li .bx-search-alt-2 {
+  position: absolute;
+  z-index: 99;
+  color: #fff;
+  font-size: 22px;
+  transition: all 0.5 ease;
+}
+
+.sidebar ul li .bx-search-alt-2:hover {
+  background: #fff;
+  color: #1d1b31;
 }
 
 .sidebar ul li a {
@@ -214,22 +225,35 @@
   left: 88%;
 }
 
-.home_content {
-  position: absolute;
+.main-painel {
   height: 100%;
+  max-height: 100%;
+}
+
+.main-painel {
+  position: relative;
   width: calc(100% - 78px);
   left: 78px;
   transition: all 0.5s ease;
 }
 
-.home_content .text {
-  font-size: 25px;
-  font-weight: 500;
-  color: #1d1b31;
-  margin: 12px;
+.header-content {
+  height: 75px;
+  margin: 10px 10px 10px 10px;
+  border-radius: 10px;
+  background-color: #ea3029;
 }
 
-.sidebar.active ~ .home_content {
+.main-content {
+    margin: 10px 10px 10px 10px;
+    border-radius: 10px;
+    height: 50px;
+    padding: 30px 15px;
+    min-height: calc(100vh - 75px);
+    background-color: #EDF2F6;
+}
+
+.sidebar.active ~ .main-painel {
   width: calc(100% - 240px);
   left: 240px;
 }
@@ -326,6 +350,8 @@
 //   }
 // }
 
-
-
-
+.main-panel > .content {
+  margin-top: 70px;
+  padding: 30px 15px;
+  min-height: calc(100vh - 75px);
+}
