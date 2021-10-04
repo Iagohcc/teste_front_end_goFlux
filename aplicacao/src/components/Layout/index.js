@@ -33,25 +33,22 @@ class Layout extends React.Component {
                 <input type="text" placeholder="Search..."></input>
             </li>
             <li>
-              <Link className="links_name" to="/"> Timeline </Link>    
-              {/* <a href="/">
+              <div className="item-side">
               <i class='bx bx-news'></i>
-                <span className="links_name">Timeline</span>
-              </a>      */}
+              <Link className="links_name" to="/"> Timeline </Link>
+              </div>    
             </li>
             <li>
-            <Link className="links_name" to="/albums"> Popular Albums </Link>
-              {/* <a href="/albums">
+            <div className="item-side">
               <i class='bx bx-disc'></i>
-                <span className="links_name">Popular Albums</span>
-              </a> */}
+              <Link className="links_name" to="/albums"> Popular Albums </Link>
+            </div>  
             </li>
             <li>
-            <Link className="links_name" to="/artist"> Top 10 Artist </Link>
-              {/* <a href="/artist">
+            <div className="item-side">
               <i class='bx bx-microphone'></i>
-                <span className="links_name">Top 10 Artist</span>
-              </a> */}
+              <Link className="links_name" to="/artist"> Top 10 Artist </Link>
+            </div>
             </li>
             <hr className="hr"></hr>
             <span className="yourMusic">Your Music</span>

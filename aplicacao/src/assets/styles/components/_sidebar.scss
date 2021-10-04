@@ -114,6 +114,23 @@
   border-radius: 12px;
   white-space: nowrap;
 }
+
+.sidebar ul li a,
+.sidebar ul li .item-side {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+.sidebar ul li .item-side:hover {
+  color: #11101d;
+  background-color: #fff;
+}
+
 .sidebar ul li a:hover {
   color: #11101d;
   background-color: #fff;
