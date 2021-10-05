@@ -23,7 +23,7 @@ class Layout extends React.Component {
           <div className="logo_content">
             <div className="logo">
               <img src={SideLogo} alt="" />
-              <div className="logo_name">fluxMusic</div>
+              <div className="logo_name">FluxMusic</div>
             </div>
             <i class="bx bx-menu" id="btn" onClick={this.abreSide}></i>
           </div>
@@ -100,11 +100,11 @@ class Layout extends React.Component {
         </div>
         <div className="main-painel">
           <div className="header-content">
-            <div className="header-painel">
-              <div className="Logo-header">
-                <h1 className="logo_name">FluxMusic</h1>
+            <div className="header-content__header-painel">
+              <div className="header-content__header-painel__Logo-header">
+                <h1>FluxMusic</h1>
               </div>
-              <div className="search-header">
+              <div className="header-content__header-painel__search-header">
                 <i class="bx bx-search-alt-2"></i>
                 <input type="text" placeholder="Search..."></input>
               </div>

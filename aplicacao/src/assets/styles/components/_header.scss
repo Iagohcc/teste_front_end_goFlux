@@ -1,28 +1,39 @@
-.header-painel {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  justify-content: space-between;
-}
+.header-content {
+  height: 75px;
+  margin: 10px 10px 10px 10px;
+  border-radius: 10px;
+  background-color: #ea3029;
 
-.header-painel .Logo-header {
-  padding: 5px 5px 5px 50px;
-  color: #fff;
-  font-size: 25px;
-}
+  &__header-painel {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
 
-.header-painel .search-header {
-  color: #fff;
-  font-size: 22px;
-  padding: 5px 80px 5px 5px;
-}
+    &__Logo-header {
+      padding: 5px 5px 5px 50px;
+      color: #fff;
+      font-size: 25px;
+    }
+  
+    &__search-header {
+      align-items: center;
+      color: #fff;
+      padding: 5px 80px 5px 5px;
 
-.header-painel input {
-  border-radius: 12px;
-  outline: none;
-  border: none;
-  background: #fff;
-  padding-left: 10px;
-  font-size: 20px;
+      input {
+        border-radius: 12px;
+        outline: none;
+        border: none;
+        background: #fff;
+        padding-left: 10px;
+        font-size: 20px;
+      }
+
+      input::placeholder {
+        font-size: 14px;
+      }
+    }
+  }
 }

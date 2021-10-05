@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://developers.music-story.com/developers/genre",
+  baseURL: "http://api.music-story.com/en/",
 });
 
 export default api;
