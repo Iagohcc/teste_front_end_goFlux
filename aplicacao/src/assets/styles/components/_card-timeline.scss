@@ -1,0 +1,44 @@
+.card-timeline {
+  background-color: turquoise;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 30px;
+
+  &__content-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+
+  &__title {
+    @include fontDelta(20px, 25px, bold);
+  }
+
+  &__date {
+    @include fontDelta(16px, 25px, 400);
+  }
+
+  &__content-body {
+    @include fontDelta(16px, 25px, 400);
+    margin-bottom: 10px;
+  }
+
+  &__content-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+
+  &__button {
+    background-color: #ea3029;
+    color: #fff;
+    border-radius: 5px;
+    padding: 6px 10px;
+  }
+
+  &__artist {
+    @include fontDelta(16px, 25px, 400);
+  }
+}

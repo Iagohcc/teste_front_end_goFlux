@@ -1,6 +1,29 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
+import CardTimeline from "../../components/CardTimeline";
+import Col from "../../components/Grid/Col";
+import Row from "../../components/Grid/Row";
 
 export default function Timeline() {
+  const data = [
+    {
+      title: "Noticias",
+      date: "1 setember",
+      text: "dadadfe efr efaf eefaefefe",
+      artist: "Iago",
+    },
+    {
+      title: "Noticias 2",
+      date: "1 setember",
+      text: "dadadfe efr efaf eefaefefe",
+      artist: "Iago",
+    },
+    {
+      title: "Noticias 3",
+      date: "1 setember",
+      text: "dadadfe efr efaf eefaefefe",
+      artist: "Iago",
+    },
+  ];
   // const [timeline, setTimeline] = useState();
   // useEffect(() => {
   //   var myHeaders = new Headers();
@@ -21,6 +44,18 @@ export default function Timeline() {
   return (
     <div>
       <div className="text">Timeline</div>
+      <Row>
+        {data.map((item) => (
+          <Col>
+            <CardTimeline
+              title={item.title}
+              date={item.date}
+              text={item.text}
+              artist={item.artist}
+            />
+          </Col>
+        ))}
+      </Row>
     </div>
   );
 }

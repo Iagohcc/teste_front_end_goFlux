@@ -1,9 +1,8 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Albums from './pages/Albums';
-import Artist from './pages/Artist';
-import Timeline from './pages/Timeline';
-import Layout from './components/Layout';
-
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Albums from "./pages/Albums";
+import Artist from "./pages/Artist";
+import Timeline from "./pages/Timeline";
+import Layout from "./components/Layout";
 
 const Routes = () => {
   return (
@@ -18,6 +17,6 @@ const Routes = () => {
       </Switch>
     </BrowserRouter>
   );
-}
+};
 
 export default Routes;

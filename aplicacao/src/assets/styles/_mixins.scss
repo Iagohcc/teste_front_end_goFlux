@@ -1,21 +1,28 @@
-@import '../../../node_modules/bootstrap/scss/mixins';
+@import "../../../node_modules/bootstrap/scss/mixins";
 
 @mixin fontAlpha($px, $line-height, $weight) {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: toRem($px);
   line-height: toRem($line-height);
   font-weight: $weight;
 }
 
 @mixin fontBeta($px, $line-height, $weight) {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: toRem($px);
   line-height: toRem($line-height);
   font-weight: $weight;
 }
 
 @mixin fontCharlie($px, $line-height, $weight) {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
+  font-size: toRem($px);
+  line-height: toRem($line-height);
+  font-weight: $weight;
+}
+
+@mixin fontDelta($px, $line-height, $weight) {
+  font-family: "Roboto", sans-serif;
   font-size: toRem($px);
   line-height: toRem($line-height);
   font-weight: $weight;
