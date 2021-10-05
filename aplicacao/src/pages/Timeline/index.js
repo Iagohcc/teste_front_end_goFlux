@@ -44,7 +44,7 @@ export default function Timeline() {
   ];
 
   return (
-    <div>
+    <>
       <div className="title-page">Timeline</div>
       <Row>
         {data.map((item) => (
@@ -58,6 +58,6 @@ export default function Timeline() {
           </Col>
         ))}
       </Row>
-    </div>
+    </>
   );
 }

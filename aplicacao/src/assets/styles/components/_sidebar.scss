@@ -1,14 +1,24 @@
 .sidebar {
   position: fixed;
-  top: 0;
-  left: 0;
   height: 100%;
-  width: 78px;
   background-color: #161633;
   padding: 6px 14px;
   transition: all 0.5s ease;
+  top: 0;
+  left: 0;
+  width: 78px;
 
   &.sidebar.active {
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    z-index: 1;
+
+    #btn {
+      left: 90%;
+    }
+
     .links_name {
       opacity: 1;
 
@@ -16,6 +26,10 @@
         background-color: #fff;
         color: #161633;
       }
+    }
+
+    @media (min-width: 992px) {
+      width: 240px;
     }
   }
 
@@ -48,13 +62,46 @@
       }
     }
   }
+
+  ul li i {
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+  }
+
+  #btn {
+    position: absolute;
+    color: #fff;
+    top: 6px;
+    left: 50px;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+  }
+
+  ul li a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+    white-space: nowrap;
+  
+    .links_name {
+      opacity: 0;
+    }
+  }
 }
 
-.sidebar.active {
-  width: 240px;
-}
 
-.sidebar .logo_content .logo {
+
+ .logo_content .logo {
   color: #fff;
   display: flex;
   height: 50px;
@@ -78,27 +125,6 @@
   margin-left: 8px;
   font-size: 20px;
   font-weight: 400;
-}
-
-.sidebar #btn {
-  position: absolute;
-  color: #fff;
-  top: 6px;
-  left: 50px;
-  font-size: 20px;
-  height: 50px;
-  width: 50px;
-  text-align: center;
-  line-height: 50px;
-  transform: translateX(-50%);
-}
-
-.sidebar.active #btn {
-  left: 90%;
-}
-
-.sidebar ul {
-  margin-top: 20px;
 }
 
 .sidebar ul li {
@@ -157,31 +183,11 @@
   color: #1d1b31;
 }
 
-.sidebar ul li a {
-  color: #fff;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  transition: all 0.4s ease;
-  border-radius: 12px;
-  white-space: nowrap;
-
-  .links_name {
-    opacity: 0;
-  }
-}
-
 .sidebar ul li a:hover {
   color: #11101d;
   background-color: #fff;
 }
-.sidebar ul li i {
-  height: 50px;
-  min-width: 50px;
-  border-radius: 12px;
-  line-height: 50px;
-  text-align: center;
-}
+
 
 .sidebar .profile_content {
   position: absolute;

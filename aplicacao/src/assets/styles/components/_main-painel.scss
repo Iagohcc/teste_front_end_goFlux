@@ -9,7 +9,7 @@
     &__main-content {
         margin: 10px 10px 10px 10px;
         border-radius: 10px;
-        height: 50px;
+        height: 100%;
         padding: 30px 15px;
         min-height: calc(100vh - 75px);
         background-color: #edf2f6;
@@ -19,8 +19,8 @@
 .sidebar.active ~ .main-painel {
     width: calc(100% - 240px);
     left: 240px;
+    height: 100%;
 }
-
 
 .title-page {
     @include fontDelta(20px, 10px, bold);
