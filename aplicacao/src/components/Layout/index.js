@@ -110,7 +110,7 @@ class Layout extends React.Component {
               </div>
             </div>
           </div>
-          <div className="main-content">{this.props.children}</div>
+          <div className="main-painel__main-content">{this.props.children}</div>
         </div>
       </div>
     );
