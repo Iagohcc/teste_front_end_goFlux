@@ -10,7 +10,7 @@ export default function CardTimeline(props) {
         <a href="." target="_blank" className="card-timeline__button">
           Ver mais...
         </a>
-        <span className="card-timeline__artist">{props.artist}</span>
+        {/* <span className="card-timeline__artist">{props.artist}</span> */}
       </div>
     </div>
   );

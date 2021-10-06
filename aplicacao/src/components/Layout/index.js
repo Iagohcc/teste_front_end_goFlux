@@ -39,7 +39,7 @@ class Layout extends React.Component {
                 to="/timeline"
               >
                 <i class="bx bx-news"></i>{" "}
-                <span className="links_name">Timeline</span>
+                <span className="links_name">Episodes</span>
               </NavLink>
             </li>
             <li>
@@ -49,7 +49,7 @@ class Layout extends React.Component {
                 to="/albums"
               >
                 <i class="bx bx-disc"></i>
-                <span className="links_name"> Popular Albums</span>
+                <span className="links_name"> Characters</span>
               </NavLink>
             </li>
             <li>
@@ -59,7 +59,7 @@ class Layout extends React.Component {
                 to="/artist"
               >
                 <i class="bx bx-microphone"></i>
-                <span className="links_name">Top 10 Artist</span>{" "}
+                <span className="links_name">Locations</span>{" "}
               </NavLink>
             </li>
             <div class="myMusic">
@@ -102,7 +102,7 @@ class Layout extends React.Component {
           <div className="header-content">
             <div className="header-content__header-painel">
               <div className="header-content__header-painel__Logo-header">
-                <h1>FluxMusic</h1>
+                <h1>Flux and Morty</h1>
               </div>
               <div className="header-content__header-painel__search-header">
               <i class="bx bx-search-alt-2"></i>
