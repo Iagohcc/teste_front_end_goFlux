@@ -105,8 +105,8 @@ class Layout extends React.Component {
                 <h1>FluxMusic</h1>
               </div>
               <div className="header-content__header-painel__search-header">
-                <i class="bx bx-search-alt-2"></i>
-                <input type="text" placeholder="Search..."></input>
+              <i class="bx bx-search-alt-2"></i>
+              <input type="text" placeholder="Search..."></input>
               </div>
             </div>
           </div>
