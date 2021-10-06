@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Albums from "./pages/Albums";
-import Artist from "./pages/Artist";
-import Timeline from "./pages/Timeline";
+import Locations from "./pages/Locations";
+import Characters from "./pages/Characters";
+import Episodes from "./pages/Episodes";
 import Layout from "./components/Layout";
 
 const Routes = () => {
@@ -9,10 +9,10 @@ const Routes = () => {
     <BrowserRouter>
       <Switch>
         <Layout>
-          <Route exact path="/" component={Timeline} />
-          <Route exact path="/timeline" component={Timeline} />
-          <Route exact path="/artist" component={Artist} />
-          <Route exact path="/albums" component={Albums} />
+          <Route exact path="/" component={Episodes} />
+          <Route exact path="/episodes" component={Episodes} />
+          <Route exact path="/characters" component={Characters} />
+          <Route exact path="/albums" component={Locations} />
         </Layout>
       </Switch>
     </BrowserRouter>

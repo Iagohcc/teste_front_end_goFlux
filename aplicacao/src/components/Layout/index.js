@@ -23,7 +23,7 @@ class Layout extends React.Component {
           <div className="logo_content">
             <div className="logo">
               <img src={SideLogo} alt="" />
-              <div className="logo_name">FluxMusic</div>
+              <div className="logo_name">Flux and Morty</div>
             </div>
             <i class="bx bx-menu" id="btn" onClick={this.abreSide}></i>
           </div>
@@ -38,7 +38,7 @@ class Layout extends React.Component {
                 activeClassName="is-active"
                 to="/timeline"
               >
-                <i class="bx bx-news"></i>{" "}
+                <i class='bx bx-video'></i>
                 <span className="links_name">Episodes</span>
               </NavLink>
             </li>
@@ -48,7 +48,7 @@ class Layout extends React.Component {
                 activeClassName="is-active"
                 to="/albums"
               >
-                <i class="bx bx-disc"></i>
+                <i class='bx bx-face' ></i>
                 <span className="links_name"> Characters</span>
               </NavLink>
             </li>
@@ -58,33 +58,11 @@ class Layout extends React.Component {
                 activeClassName="is-active"
                 to="/artist"
               >
-                <i class="bx bx-microphone"></i>
+                <i class='bx bx-current-location'></i>
                 <span className="links_name">Locations</span>{" "}
               </NavLink>
             </li>
-            <div class="myMusic">
               <hr className="hr"></hr>
-              <i class="bx bx-headphone"></i>
-              <span className="yourMusic ">My Music</span>
-            </div>
-            <li>
-              <a href="#">
-                <i class="bx bx-music"></i>
-                <span className="links_name">Songs</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="bx bx-microphone"></i>
-                <span className="links_name">Artist</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="bx bx-disc"></i>
-                <span className="links_name">Albums</span>
-              </a>
-            </li>
           </ul>
           <div className="profile_content">
             <div className="profile">
