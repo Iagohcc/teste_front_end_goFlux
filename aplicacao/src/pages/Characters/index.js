@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
-// import React, { useEffect, useState } from "react";
 // import api from "./services/api";
 import Card from "../../components/Card";
 import Col from "../../components/Grid/Col";
 import Row from "../../components/Grid/Row";
+import searchStore from "../../store/searchStore";
 
 export default function Artist() {
+  const search = searchStore();
+  console.log(search);
   const [personagens, setPersonagens] = useState({ info: {}, results: [] });
   const [pagina, setPagina] = useState(1);
   const [maxPages, setMaxPages] = useState();

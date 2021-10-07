@@ -3,9 +3,21 @@ import { NavLink } from "react-router-dom";
 import "boxicons";
 import photoProfile from "../../assets/img/Iago.PNG";
 import SideLogo from "../../assets/img/favicon-32x32.png";
+import searchStore from "../../store/searchStore";
 
 class Layout extends React.Component {
   //função
+  search(e) {
+    const addSearch = searchStore((state) => state.addSearch);
+    const input = document.querySelector("#searchHeader");
+
+    const search = input.value;
+
+    addSearch({
+      search,
+    });
+  }
+
   abreSide() {
     let sidebar = document.querySelector(".sidebar");
     sidebar.classList.toggle("active");
@@ -84,7 +96,12 @@ class Layout extends React.Component {
               </div>
               <div className="header-content__header-painel__search-header">
                 <i class="bx bx-search-alt-2"></i>
-                <input type="text" placeholder="Search..."></input>
+                <input
+                  type="text"
+                  id="searchHeader"
+                  onClick={this.search}
+                  placeholder="Search..."
+                ></input>
               </div>
             </div>
           </div>
