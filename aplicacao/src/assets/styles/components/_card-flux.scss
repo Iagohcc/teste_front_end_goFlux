@@ -1,9 +1,10 @@
-.card-timeline {
-  background-color: #b4b4b4;
+.card-flux {
+  background-color: #fff;
   width: 100%;
   padding: 10px;
   margin-bottom: 30px;
   border-radius: 10px;
+  border: 1px solid #ea3029;
 
   &__content-head {
     display: flex;
@@ -17,7 +18,7 @@
   }
 
   &__date {
-    @include fontDelta(16px, 25px, 400);
+    @include fontDelta(16px, 25px, italic);
   }
 
   &__content-body {
@@ -37,9 +38,5 @@
     color: #fff;
     border-radius: 5px;
     padding: 6px 10px;
-  }
-
-  &__artist {
-    @include fontDelta(16px, 25px, 400);
   }
 }

@@ -7,34 +7,37 @@ import Row from "../../components/Grid/Row";
 
 export default function Artist() {
   const [personagens, setPersonagens] = useState({ info: {}, results: [] });
-  const [pagina, setPagina] = useState(1)
+  const [pagina, setPagina] = useState(1);
   const [maxPages, setMaxPages] = useState();
 
   function handleProximo() {
     if (pagina < maxPages) {
-      setPagina(pagina + 1)
+      setPagina(pagina + 1);
     }
   }
   function handleAnterior() {
     if (pagina > 1) {
-      setPagina(pagina - 1)
+      setPagina(pagina - 1);
     }
   }
 
   useEffect(() => {
     async function pegarPersonagens() {
       var requestOptions = {
-        method: 'GET',
-        redirect: 'follow'
+        method: "GET",
+        redirect: "follow",
       };
-      await fetch(`https://rickandmortyapi.com/api/character?page=${pagina}`, requestOptions)
-        .then(response => response.json())
+      await fetch(
+        `https://rickandmortyapi.com/api/character?page=${pagina}`,
+        requestOptions
+      )
+        .then((response) => response.json())
         .then((result) => {
-          setPersonagens(result)
-          setMaxPages(result.info.pages)
-        })
+          setPersonagens(result);
+          setMaxPages(result.info.pages);
+        });
     }
-    pegarPersonagens()
+    pegarPersonagens();
   }, [pagina]);
   return (
     <>
@@ -42,16 +45,14 @@ export default function Artist() {
       <Row>
         {personagens.results.map((item) => (
           <Col>
-            <Card
-              imgSrc={item.image}
-              artist={item.name}
-              isArtist
-            />
+            <Card imgSrc={item.image} artist={item.name} isArtist />
           </Col>
         ))}
       </Row>
-      <button onClick={handleAnterior}>Previous page</button>
-      <button onClick={handleProximo}>Next page</button>
+      <div className="btn-page">
+        <button onClick={handleAnterior}>Previous page</button>
+        <button onClick={handleProximo}>Next page</button>
+      </div>
     </>
   );
 }

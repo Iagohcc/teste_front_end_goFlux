@@ -1,7 +1,7 @@
 .sidebar {
   position: fixed;
   height: 100%;
-  background-color: #161633;
+  background-color: #ffc500;
   padding: 6px 14px;
   transition: all 0.5s ease;
   top: 0;
@@ -23,8 +23,8 @@
       opacity: 1;
 
       &.is-active {
-        background-color: #fff;
-        color: #161633;
+        background-color: #ea3029;
+        color: #fff;
       }
     }
 
@@ -50,13 +50,13 @@
           }
 
           &:hover {
-            color: #11101d;
+            color: #ea3029;
             background-color: #fff;
           }
 
           &.is-active {
             background-color: #fff;
-            color: #161633;
+            color: #ea3029;
           }
         }
       }
@@ -73,7 +73,7 @@
 
   #btn {
     position: absolute;
-    color: #fff;
+    color: #000;
     top: 6px;
     left: 50px;
     font-size: 20px;
@@ -92,17 +92,22 @@
     transition: all 0.4s ease;
     border-radius: 12px;
     white-space: nowrap;
-  
+
     .links_name {
       opacity: 0;
     }
   }
+
+  hr {
+    width: 100%;
+    height: 1px;
+    border: 0px;
+    border-top: 1px solid red;
+    background-color: #dddddd;
+  }
 }
 
-
-
- .logo_content .logo {
-  color: #fff;
+.logo_content .logo {
   display: flex;
   height: 50px;
   width: 100%;
@@ -122,6 +127,7 @@
 }
 
 .logo_content .logo .logo_name {
+  color: #ea3029;
   margin-left: 8px;
   font-size: 20px;
   font-weight: 400;
@@ -159,17 +165,6 @@
   margin-left: 8px;
 }
 
-.sidebar .bx-headphone {
-  color: #fff;
-}
-
-.sidebar .yourMusic {
-  margin-left: 4px;
-  margin-bottom: 5px;
-  color: #fff;
-  text-align: center;
-}
-
 .sidebar ul li .bx-search-alt-2 {
   position: absolute;
   z-index: 99;
@@ -180,14 +175,13 @@
 
 .sidebar ul li .bx-search-alt-2:hover {
   background: #fff;
-  color: #1d1b31;
+  color: #ea3029;
 }
 
 .sidebar ul li a:hover {
-  color: #11101d;
+  color: #ea3029;
   background-color: #fff;
 }
-
 
 .sidebar .profile_content {
   position: absolute;
@@ -222,7 +216,7 @@
   width: 45px;
   object-fit: cover;
   border-radius: 12px;
-  border: 1px solid #11101d;
+  border: 1px solid #ffc500;
 }
 
 .profile .profile_details .name_people {

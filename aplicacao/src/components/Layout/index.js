@@ -36,9 +36,9 @@ class Layout extends React.Component {
               <NavLink
                 className="links_name"
                 activeClassName="is-active"
-                to="/timeline"
+                to="/episodes"
               >
-                <i class='bx bx-video'></i>
+                <i class="bx bx-video"></i>
                 <span className="links_name">Episodes</span>
               </NavLink>
             </li>
@@ -46,9 +46,9 @@ class Layout extends React.Component {
               <NavLink
                 className="links_name"
                 activeClassName="is-active"
-                to="/albums"
+                to="/characters"
               >
-                <i class='bx bx-face' ></i>
+                <i class="bx bx-face"></i>
                 <span className="links_name"> Characters</span>
               </NavLink>
             </li>
@@ -56,13 +56,13 @@ class Layout extends React.Component {
               <NavLink
                 className="links_name"
                 activeClassName="is-active"
-                to="/artist"
+                to="/locations"
               >
-                <i class='bx bx-current-location'></i>
+                <i class="bx bx-current-location"></i>
                 <span className="links_name">Locations</span>{" "}
               </NavLink>
             </li>
-              <hr className="hr"></hr>
+            <hr />
           </ul>
           <div className="profile_content">
             <div className="profile">
@@ -83,12 +83,15 @@ class Layout extends React.Component {
                 <h1>Flux and Morty</h1>
               </div>
               <div className="header-content__header-painel__search-header">
-              <i class="bx bx-search-alt-2"></i>
-              <input type="text" placeholder="Search..."></input>
+                <i class="bx bx-search-alt-2"></i>
+                <input type="text" placeholder="Search..."></input>
               </div>
             </div>
           </div>
           <div className="main-painel__main-content">{this.props.children}</div>
+          <a className="voltaTopo" href="#">
+            <i class="bx bx-up-arrow"></i>
+          </a>
         </div>
       </div>
     );

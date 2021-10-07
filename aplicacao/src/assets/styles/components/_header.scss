@@ -38,7 +38,6 @@
 
       .bx-search-alt-2 {
         position: absolute;
-        z-index: 99;
         color: #fff;
         font-size: 22px;
         padding: 10px;
@@ -46,7 +45,7 @@
 
       input {
         background-color: rgba(222, 222, 222, 0.3);
-        border: none;
+        border: 1px solid #fff;
         outline: none;
         border-radius: 12px;
         padding: 12px 38px;
