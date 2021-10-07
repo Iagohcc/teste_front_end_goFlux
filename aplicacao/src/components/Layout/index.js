@@ -6,17 +6,15 @@ import SideLogo from "../../assets/img/favicon-32x32.png";
 import searchStore from "../../store/searchStore";
 
 class Layout extends React.Component {
-  //função
-  search(e) {
-    const addSearch = searchStore((state) => state.addSearch);
-    const input = document.querySelector("#searchHeader");
+  // //função
+  // search({target}) {
+  //   const addSearch = searchStore(state => state.addSearch);
+  //   const search = target.value;
 
-    const search = input.value;
-
-    addSearch({
-      search,
-    });
-  }
+  //   addSearch({
+  //     search,
+  //   });
+  // }
 
   abreSide() {
     let sidebar = document.querySelector(".sidebar");
@@ -95,15 +93,15 @@ class Layout extends React.Component {
               <div className="header-content__header-painel__Logo-header">
                 <h1>Flux and Morty</h1>
               </div>
-              <div className="header-content__header-painel__search-header">
+              {/* <div className="header-content__header-painel__search-header">
                 <i class="bx bx-search-alt-2"></i>
                 <input
                   type="text"
                   id="searchHeader"
-                  onkeypress={this.search}
+                  // onChange={this.search.bind(this)}
                   placeholder="Search..."
-                ></input>
-              </div>
+                />
+              </div> */}
             </div>
           </div>
           <div className="main-painel__main-content">{this.props.children}</div>

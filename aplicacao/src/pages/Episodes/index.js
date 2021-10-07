@@ -7,6 +7,7 @@ export default function Episodes() {
   const [episodios, setEpisodios] = useState({ info: {}, results: [] });
   const [pagina, setPagina] = useState(1);
   const [maxPages, setMaxPages] = useState();
+  const [pesquisa, setPesquisa] = useState();
 
   useEffect(() => {
     async function pegarEpisodios() {
@@ -14,18 +15,42 @@ export default function Episodes() {
         method: "GET",
         redirect: "follow",
       };
-      await fetch(
-        `https://rickandmortyapi.com/api/episode?page=${pagina}`,
-        requestOptions
-      )
-        .then((response) => response.json())
-        .then((result) => {
-          setEpisodios(result);
-          setMaxPages(result.info.pages);
-        });
+
+      if (pesquisa) {
+        await fetch(
+          `https://rickandmortyapi.com/api/episode?name=${pesquisa}`,
+          requestOptions
+        )
+          .then((response) => response.json())
+          .then((result) => {
+            if (result.error) {
+              setMaxPages(1)
+              setEpisodios({ results: [] })
+            } else {
+              setEpisodios(result);
+              setMaxPages(result.info.pages);
+            }
+
+          });
+      } else {
+        await fetch(
+          `https://rickandmortyapi.com/api/episode?page=${pagina}`,
+          requestOptions
+        )
+          .then((response) => response.json())
+          .then((result) => {
+            if (result.error) {
+              setMaxPages(1)
+              setEpisodios({ results: [] })
+            } else {
+              setEpisodios(result);
+              setMaxPages(result.info.pages);
+            }
+          });
+      }
     }
     pegarEpisodios();
-  }, [pagina]);
+  }, [pagina, pesquisa]);
 
   function handleProximo() {
     if (pagina < maxPages) {
@@ -37,9 +62,24 @@ export default function Episodes() {
       setPagina(pagina - 1);
     }
   }
+
+  const handleSearchChange = event => {
+    setPesquisa(event.target.value)
+  }
+
   return (
     <>
       <div className="title-page">Episodes</div>
+      <div className="header-content__header-painel__search-header">
+        <i class="bx bx-search-alt-2"></i>
+        <input
+          type="text"
+          type="text"
+          placeholder="Search"
+          value={pesquisa}
+          onChange={handleSearchChange}
+        />
+      </div>
       <Row>
         {episodios.results.map((item) => (
           <Col>

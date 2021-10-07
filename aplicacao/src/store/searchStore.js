@@ -1,10 +1,11 @@
 import create from "zustand";
 
 const searchStore = create((set) => ({
-  search: [],
+  search: '',
 
   addSearch: (search) => {
-    set((state) => ({ search: [...state.search, search] }));
+    console.log(search)
+    set({ search: search });
   },
 }));
 
