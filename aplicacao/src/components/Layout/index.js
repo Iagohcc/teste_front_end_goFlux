@@ -39,6 +39,7 @@ class Layout extends React.Component {
             </div>
             <i class="bx bx-menu" id="btn" onClick={this.abreSide}></i>
           </div>
+          <hr />
           <ul className="side__nav_list">
             <li>
               <i class="bx bx-search-alt-2" onClick={this.searchBtn}></i>
@@ -99,7 +100,7 @@ class Layout extends React.Component {
                 <input
                   type="text"
                   id="searchHeader"
-                  onClick={this.search}
+                  onkeypress={this.search}
                   placeholder="Search..."
                 ></input>
               </div>

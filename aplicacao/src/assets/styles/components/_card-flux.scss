@@ -4,7 +4,7 @@
   padding: 10px;
   margin-bottom: 30px;
   border-radius: 10px;
-  border: 1px solid #ea3029;
+  border: 1px solid #219db7;
 
   &__content-head {
     display: flex;
@@ -34,8 +34,9 @@
   }
 
   &__button {
-    background-color: #ea3029;
+    background-color: #219db7;
     color: #fff;
+    border: 2px solid #88f757;
     border-radius: 5px;
     padding: 6px 10px;
   }

@@ -8,6 +8,7 @@ $npm start.
 # Principais dependências
 Axios: Consumo de api;
 Router-React-Dom: Controle e configuração de rotas.
+Zustand: Solução de gerenciamento de estado, rápida e escalável.
 
 # Framework
 React.js
