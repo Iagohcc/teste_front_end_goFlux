@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
-// import api from "./services/api";
 import Card from "../../components/Card";
 import Col from "../../components/Grid/Col";
 import Row from "../../components/Grid/Row";
 
-export default function Artist() {
+export default function Characters() {
   const [personagens, setPersonagens] = useState({ info: {}, results: [] });
   const [pagina, setPagina] = useState(1);
   const [maxPages, setMaxPages] = useState();
   const [pesquisa, setPesquisa] = useState();
+
+
+  // Funções: paginação 
 
   function handleProximo() {
     if (pagina < maxPages) {
@@ -20,6 +22,8 @@ export default function Artist() {
       setPagina(pagina - 1);
     }
   }
+
+  // Função para consumir api
 
   useEffect(() => {
     async function pegarPersonagens() {
@@ -68,22 +72,24 @@ export default function Artist() {
   }
   return (
     <>
-      <h1 className="title-page">Characters</h1>
-      <div className="header-content__header-painel__search-header">
-        <i class="bx bx-search-alt-2"></i>
-        <input
-          type="text"
-          input
-          type="text"
-          placeholder="Search"
-          value={pesquisa}
-          onChange={handleSearchChange}
-        />
+      <div className="page">
+        <h1 className="page__title-page">Characters</h1>
+        <div className="page__search-header">
+          <i class="bx bx-search-alt-2"></i>
+          <input
+            type="text"
+            input
+            type="text"
+            placeholder="Search"
+            value={pesquisa}
+            onChange={handleSearchChange}
+          />
+        </div>
       </div>
       <Row>
         {personagens.results.map((item) => (
           <Col>
-            <Card imgSrc={item.image} artist={item.name} isArtist />
+            <Card imgSrc={item.image} characters={item.name}/>
           </Col>
         ))}
       </Row>

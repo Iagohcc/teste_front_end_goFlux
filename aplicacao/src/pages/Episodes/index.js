@@ -9,6 +9,8 @@ export default function Episodes() {
   const [maxPages, setMaxPages] = useState();
   const [pesquisa, setPesquisa] = useState();
 
+   // Função para consumir api
+
   useEffect(() => {
     async function pegarEpisodios() {
       var requestOptions = {
@@ -52,6 +54,8 @@ export default function Episodes() {
     pegarEpisodios();
   }, [pagina, pesquisa]);
 
+  // Funções: paginação 
+
   function handleProximo() {
     if (pagina < maxPages) {
       setPagina(pagina + 1);
@@ -69,8 +73,9 @@ export default function Episodes() {
 
   return (
     <>
-      <div className="title-page">Episodes</div>
-      <div className="header-content__header-painel__search-header">
+    <div className="page">
+      <div className="page__title-page">Episodes</div>
+      <div className="page__search-header">
         <i class="bx bx-search-alt-2"></i>
         <input
           type="text"
@@ -79,6 +84,7 @@ export default function Episodes() {
           value={pesquisa}
           onChange={handleSearchChange}
         />
+      </div>
       </div>
       <Row>
         {episodios.results.map((item) => (

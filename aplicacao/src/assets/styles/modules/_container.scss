@@ -4,9 +4,10 @@
   padding-right: toRem(16);
   overflow: hidden;
 
-  @include media-breakpoint-up(lg) {
+  @media (min-width: 992px) {
     overflow: initial;
     padding-left: toRem(0);
     padding-right: toRem(0);
+    max-width: 100%;
   }
 }

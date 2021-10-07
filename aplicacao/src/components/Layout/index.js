@@ -3,19 +3,11 @@ import { NavLink } from "react-router-dom";
 import "boxicons";
 import photoProfile from "../../assets/img/Iago.PNG";
 import SideLogo from "../../assets/img/favicon-32x32.png";
-import searchStore from "../../store/searchStore";
 
 class Layout extends React.Component {
-  // //função
-  // search({target}) {
-  //   const addSearch = searchStore(state => state.addSearch);
-  //   const search = target.value;
 
-  //   addSearch({
-  //     search,
-  //   });
-  // }
 
+  //funções: evento adiciona classe p/ abrir fechar sidebar
   abreSide() {
     let sidebar = document.querySelector(".sidebar");
     sidebar.classList.toggle("active");
@@ -88,26 +80,19 @@ class Layout extends React.Component {
           </div>
         </div>
         <div className="main-painel">
-          <div className="header-content">
-            <div className="header-content__header-painel">
-              <div className="header-content__header-painel__Logo-header">
-                <h1>Flux and Morty</h1>
+          <div className="container">
+            <div className="header-content">
+              <div className="header-content__header-painel">
+                <div className="header-content__header-painel__Logo-header">
+                  <h1>Flux and Morty</h1>
+                </div>
               </div>
-              {/* <div className="header-content__header-painel__search-header">
-                <i class="bx bx-search-alt-2"></i>
-                <input
-                  type="text"
-                  id="searchHeader"
-                  // onChange={this.search.bind(this)}
-                  placeholder="Search..."
-                />
-              </div> */}
             </div>
+            <div className="main-painel__main-content">{this.props.children}</div>
+            <a className="voltaTopo" href="#">
+              <i class="bx bx-up-arrow"></i>
+            </a>
           </div>
-          <div className="main-painel__main-content">{this.props.children}</div>
-          <a className="voltaTopo" href="#">
-            <i class="bx bx-up-arrow"></i>
-          </a>
         </div>
       </div>
     );

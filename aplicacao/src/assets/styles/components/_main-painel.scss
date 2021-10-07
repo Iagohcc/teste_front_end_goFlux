@@ -22,13 +22,51 @@
     height: 100%;
 }
 
-.title-page {
-    @include fontDelta(20px, 10px, bold);
-    font-size: 26px;
-    color: #219db7;
-    margin-bottom: 10px;
-}
+.page {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 
+    &__title-page {
+        @include fontDelta(20px, 10px, bold);
+        font-size: 26px;
+        color: #219db7;
+        margin-bottom: 10px;
+    }
+
+    &__search-header {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        margin-left: 5px;
+
+        @media (min-width: 700px) {
+            padding: 5px 5px 15px 5px;
+        }
+
+        .bx-search-alt-2 {
+            position: absolute;
+            color: #fff;
+            font-size: 22px;
+            padding: 10px;
+        }
+
+        input {
+            background-color: #219db7;
+            border: 1px solid #88f757;
+            outline: none;
+            border-radius: 12px;
+            padding: 12px 38px;
+            color: #fff;
+        }
+
+        input::placeholder {
+            font-size: 14px;
+            color: #fff;
+        }
+    }
+}
 .voltaTopo {
     text-decoration: none;
     color: #fff;
@@ -38,4 +76,11 @@
     position: fixed;
     right: 10px;
     bottom: 10px;
+}
+
+.title-page {
+    @include fontDelta(20px, 10px, bold);
+        font-size: 26px;
+        color: #219db7;
+        margin-bottom: 10px;
 }

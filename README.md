@@ -5,10 +5,9 @@ Teste para oportunidade de front end na goFlux, utilizando react.js.
 $npm install; 
 $npm start.
 
-# Principais dependências
-Axios: Consumo de api;
+# Principais dependências e funcionalidades.
+Fetch: Utilizado para o consumo da api;
 Router-React-Dom: Controle e configuração de rotas.
-Zustand: Solução de gerenciamento de estado, rápida e escalável.
 
 # Framework
 React.js

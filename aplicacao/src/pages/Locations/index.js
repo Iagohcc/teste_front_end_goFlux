@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import api from "./services/api";
 import CardFlux from "../../components/CardFlux";
 import Col from "../../components/Grid/Col";
 import Row from "../../components/Grid/Row";
@@ -8,7 +7,8 @@ export default function Locations() {
   const [locais, setLocais] = useState({ info: {}, results: [] });
   const [pagina, setPagina] = useState(1);
   const [maxPages, setMaxPages] = useState();
-  // const [pesquisa, setPesquisa] = useState()
+ 
+   // Função para consumir api
 
   useEffect(() => {
     async function pegarLocais() {
@@ -28,6 +28,8 @@ export default function Locations() {
     }
     pegarLocais();
   }, [pagina]);
+
+  // Funções: paginação 
 
   function handleProximo() {
     if (pagina < maxPages) {

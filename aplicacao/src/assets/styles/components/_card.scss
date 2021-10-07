@@ -1,23 +1,18 @@
 .card {
   margin-bottom: 20px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    border-radius: 100%;
+  }
 
-  &.is-artist {
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    img {
-      border-radius: 100%;
-    }
-
-    .card__music {
-      display: none;
-    }
-
-    .card__artist {
-      color: #5b5b5b;
-      font-size: 20px;
-    }
+  &__characters {
+    @include fontDelta(10px, 10px, 500);
+    display: block;
+    margin-bottom: 5px;
+    color: #828282;
   }
 
   img {
@@ -25,20 +20,6 @@
     height: auto;
     object-fit: cover;
     margin-bottom: 5px;
-  }
-
-  &__music {
-    @include fontDelta(10px, 10px, bold);
-    display: block;
-    margin-bottom: 5px;
-    color: #5b5b5b;
-  }
-
-  &__artist {
-    @include fontDelta(10px, 10px, 500);
-    display: block;
-    margin-bottom: 5px;
-    color: #828282;
   }
 }
 

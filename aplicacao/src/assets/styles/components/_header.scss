@@ -25,37 +25,5 @@
         padding: 5px 5px 5px 50px;
       }
     }
-
-    &__search-header {
-      display: flex;
-      align-items: center;
-      color: #fff;
-      margin-left: 5px;
-
-      @media (min-width: 700px) {
-        padding: 5px 80px 5px 5px;
-      }
-
-      .bx-search-alt-2 {
-        position: absolute;
-        color: #fff;
-        font-size: 22px;
-        padding: 10px;
-      }
-
-      input {
-        background-color: rgba(222, 222, 222, 0.3);
-        border: 1px solid #88f757;
-        outline: none;
-        border-radius: 12px;
-        padding: 12px 38px;
-        color: #fff;
-      }
-
-      input::placeholder {
-        font-size: 14px;
-        color: #fff;
-      }
-    }
   }
 }
